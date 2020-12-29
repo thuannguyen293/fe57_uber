@@ -44,13 +44,14 @@ $('.btn-tinhtien').on('click', function(){
     }
 });
 
-$('.btn-inhoadon').on('click', function(){
+$('.btn-inhoadon').on('click', function(e){
     var loaiXe = $("input[name='loaixe']:checked").val();
     var km = $("input[name='km']").val();
     var thoiGian = $("input[name='thoigian']").val();
     var thanhtien, dongia, html;
     if (!loaiXe || !km || !thoiGian || km <= 0 || thoiGian <= 0) {
         alert("Vui lòng nhập thông tin chính xác");
+        e.stopPropagation();
     }else{
         dongia = tinhDongia(loaiXe);
         thanhtien = tinhtien(dongia, km, thoiGian);
@@ -88,6 +89,7 @@ $('.btn-inhoadon').on('click', function(){
         html += '   <td></td>';
         html += '   <td>' + thanhtien + '</td>';
         html += '</tr>';
+        $('.table tbody').html(html);
     }
-    $('.table tbody').html(html);
+    
 })
