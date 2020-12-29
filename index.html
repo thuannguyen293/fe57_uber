@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CodePro.vn - CyberSoft.edu.vn</title>
+    <title>Tính tiền Uber</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--===============================================================================================-->
@@ -57,20 +57,24 @@
           <h2>Vui lòng chọn loại xe:</h2>
           <ul>
             <li class="type">
-              <input id="uberX" type="radio" name="loaixe" value="x" />
+              <input id="uberX" type="radio" name="loaixe" value="uberX" />
               <label for="uberX">Uber X</label>
-
               <div class="check"></div>
             </li>
 
             <li class="type">
-              <input id="uberSUV" type="radio" name="loaixe" value="suv" />
+              <input id="uberSUV" type="radio" name="loaixe" value="uberSUV" />
               <label for="uberSUV">Uber SUV</label>
               <div class="check"></div>
             </li>
 
             <li class="type">
-              <input id="uberBlack" type="radio" name="loaixe" value="black" />
+              <input
+                id="uberBlack"
+                type="radio"
+                name="loaixe"
+                value="uberBlack"
+              />
               <label for="uberBlack">Uber Black</label>
               <div class="check"></div>
             </li>
@@ -116,7 +120,7 @@
             <div class="contact100-form-bgbtn"></div>
             <button
               type="button"
-              class="contact100-form-btn"
+              class="contact100-form-btn btn-inhoadon"
               data-toggle="modal"
               data-target="#exampleModal"
             >
@@ -135,7 +139,45 @@
         </div>
       </div>
     </div>
-
+    <div class="modal" tabindex="-1" id="exampleModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Hóa đơn</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Chi tiết</th>
+                  <th scope="col">Sử dụng</th>
+                  <th scope="col">Đơn giá</th>
+                  <th scope="col">Thành tiền</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!--===============================================================================================-->
     <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
     <!--===============================================================================================-->
